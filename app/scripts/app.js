@@ -1,5 +1,5 @@
  (function() {
-     function config($stateProvider, $locationProvider) {
+     function config($stateProvider, $locationProvider, $urlRouterProvider) {
       $locationProvider
         .html5Mode({
             enabled: true,
@@ -7,12 +7,16 @@
         });
 
       $stateProvider
-        .state('chat', {
-          url: '/',
-          controller: 'chatCtrl as chat',
-          templateUrl: '/templates/chat.html'
-        })
+        .state('landing', {
+          url: '/landing',
+          controller: 'LandingController as landing',
+          templateUrl: '/templates/landing.html'
+        });
+
+
+       $urlRouterProvider.otherwise("/landing");
      }
+
 
      angular
          .module('blocTime', ['ui.router', 'firebase'])
