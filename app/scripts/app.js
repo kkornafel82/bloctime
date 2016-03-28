@@ -9,8 +9,14 @@
       $stateProvider
         .state('landing', {
           url: '/landing',
-          controller: 'LandingController as landing',
+          controller: 'LandingCtrl as landing',
           templateUrl: '/templates/landing.html'
+        });
+
+      $stateProvider
+        .state('home', {
+          url: '/home',
+          templateUrl: '/templates/home.html'
         });
 
 

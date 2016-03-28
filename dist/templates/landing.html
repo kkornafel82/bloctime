@@ -1,1 +1,6 @@
-<p>This is my landing page</p>
+<div class="container">
+  <p class="timer">{{ counter }}</p>
+  <button class="button" ng-click="myTimeout()" ng-show="runningInterval === null">Start</button>
+  <button class="button" ng-click="reset()" ng-show="runningInterval !== null">Reset</button>
+  <!--<button class="button" ng-click="pauseTimer()">Stop</button> -->
+</div>
