@@ -1,6 +1,6 @@
 <div class="container">
   <p class="timer">{{ counter }}</p>
-  <button class="button" ng-click="myTimeout()" ng-show="runningInterval === null">Start</button>
-  <button class="button" ng-click="reset()" ng-show="runningInterval !== null">Reset</button>
-  <!--<button class="button" ng-click="pauseTimer()">Stop</button> -->
+  <button class="md-button" ng-click="myTimeout()" ng-show="runningInterval === null && !onBreak">Start</button>
+  <button class="md-button" ng-click="reset()" ng-show="runningInterval !== null">Reset</button>
+  <button class="md-button" ng-click="myBreak()" ng-show="runningInterval === null && onBreak">Start Break</button>
 </div>
