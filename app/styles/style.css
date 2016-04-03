@@ -1,13 +1,54 @@
 .container{
-  padding-top: 100px;
-  text-align: center;
+  height: 900px;
+
 }
 
 .app {
-  float: right;
-  padding-right: 300px;
-  display: inline-block;
+  position: relative;
+  height: 300px;
+  width: 300px;
   text-align: center;
+  font-family: 'Bangers', cursive;
+  display: inline-block;
+}
+
+.picture {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+}
+
+.content {
+  height: 800px;
+  width: 605px;
+  margin: auto;
+}
+
+
+
+.title {
+  font-size: 3rem;
+  width: 750px;
+  text-align: center;
+  height: 100px;
+  position: relative;
+  padding-top: 5px;
+  font-family: 'Bangers', cursive;
+  margin: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  background-color: pink;
+  text-align: center;
+  margin: auto;
+  font-family: 'Bangers', cursive;
+
 }
 
 
@@ -21,7 +62,7 @@
   margin: 6px 8px 6px 8px;
   min-width: 88px;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   text-decoration:none;
@@ -29,28 +70,8 @@
   outline: none;
 }
 
-.navbar {
-  font-size: 3rem;
-  font-weight: 10;
-  text-align: left;
-  padding-left: 125px;
-}
-
 .tomato {
+  position: relative;
   height: 300px;
   width: 300px;
-  position: relative;
-  display: inline-block;
-  padding-top: 50px;
-}
-
-.left-panel {
-  width: 100px;
-  background-color: red;
-}
-
-.right-panel {
-  width: 50px;
-  float: right;
-  background-color: red;
 }

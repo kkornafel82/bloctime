@@ -3,6 +3,7 @@
       $scope.counter = 10;
       $scope.runningInterval = null;
       $scope.onBreak = false;
+      $scope.noOfSessions = 0;
 
       $scope.onTimeout = function(){
         if ($scope.counter > 0) {
@@ -10,9 +11,17 @@
         }
         else if ($scope.counter < 1) {
             $scope.runningInterval = null;
-            alert("Take a break!");
             $scope.onBreak = true;
+            $scope.noOfSessions = $scope.noOfSessions+1;
+            
+            if ($scope.noOfSessions === 4) {
+             $scope.counter = 15;
+             alert("Take a long break!");
+             $scope.noOfSessions === 0;
+            } else{
             $scope.counter = 5;
+            alert("Take a break!");
+          };
         }
       };
 
@@ -39,8 +48,10 @@
       $scope.reset= function(){
         $interval.cancel($scope.runningInterval);
         
-        if ($scope.onBreak) {
+        if ($scope.onBreak && $scope.noOfSessions !== 4) {
           $scope.counter = 5;
+        }else if ($scope.onBreak && $scope.noOfSessions === 4){
+          $scope.counter = 15;
         }else {
           $scope.counter = 10;
         };
