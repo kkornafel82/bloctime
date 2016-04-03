@@ -11,6 +11,10 @@
       scope.onBreak = false;
       scope.noOfSessions = 0;
 
+      var mySound = new buzz.sound( "/assets/sounds/gas-bell.mp3", {
+         preload: true
+      });
+
       scope.onTimeout = function(){
         if (scope.counter > 0) {
             scope.counter = scope.counter-1;
@@ -22,11 +26,11 @@
             
             if (scope.noOfSessions === 4) {
              scope.counter = 15;
-             alert("Take a long break!");
+             mySound.play();
              scope.noOfSessions === 0;
             } else{
             scope.counter = 5;
-            alert("Take a break!");
+            mySound.play();
           };
         }
       };
@@ -36,7 +40,7 @@
             scope.counter = scope.counter-1;
           }
           else if (scope.counter < 1) {
-            alert("Back to work!");
+            mySound.play();
             scope.onBreak = false;
             scope.counter = 10;
             scope.runningInterval = null;
