@@ -1,6 +1,12 @@
-<div class="container">
-  <p class="timer">{{ counter | timecode }}</p>
-  <button class="md-button" ng-click="myTimeout()" ng-show="runningInterval === null && !onBreak">Start Working</button>
-  <button class="md-button" ng-click="reset()" ng-show="runningInterval !== null">Reset</button>
-  <button class="md-button" ng-click="myBreak()" ng-show="runningInterval === null && onBreak">Start Break</button>
-</div>
+<timer></timer>
+
+<form>
+  <input type="text" ng-model="task">
+  <button ng-click="addTask()">Add task</button>
+</form>
+
+<ul>
+  <li ng-repeat="task in all">
+    {{task.name}}
+    <li>
+    </ul>
