@@ -9,6 +9,11 @@
         $scope.task = "";
      }
 
+     $scope.removeTask = function(){
+       console.log($scope.task)
+       Tasks.all.$remove($scope.task)
+     }
+
 
 }
 

@@ -14,11 +14,12 @@
 }
 
 .list {
+  list-style-type: square;
 
 }
 
 .item {
-  width: 100px;
+  width: 200px;
   margin: auto;
   padding-left: 30px;
 }

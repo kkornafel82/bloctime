@@ -14,7 +14,7 @@
 <div class="tasks">
   <h2>Completed Tasks</h2><br>
   <ul class="list">
-    <li class="item" ng-repeat="task in all">{{task.name}}</li>
+    <li class="item" ng-repeat="task in all">{{task.name}}  <button class="md-button" ng-click="removeTask()">Remove</button></li>
   </ul>
 
   <form>
