@@ -1,12 +1,25 @@
-<timer></timer>
 
-<form>
-  <input type="text" ng-model="task">
-  <button ng-click="addTask()">Add task</button>
-</form>
+<div class="content">
+  <div class="picture">        
+    <img src="assets/images/tomatotimer.jpg" alt="tomato" class="tomato">
+  </div>
 
-<ul>
-  <li ng-repeat="task in all">
-    {{task.name}}
-    <li>
-    </ul>
+
+  <div class="app">  
+    <timer></timer>
+  </div>
+</div>
+
+
+<div class="tasks">
+  <h2>Completed Tasks</h2><br>
+  <ul class="list">
+    <li class="item" ng-repeat="task in all">{{task.name}}</li>
+  </ul>
+
+  <form>
+    <input type="text" ng-model="task">
+    <button class="md-button" ng-click="addTask()">Add task</button>
+  </form>
+</div>
+

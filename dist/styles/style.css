@@ -1,15 +1,26 @@
 .container{
-  height: 900px;
+  height: 1100px;
 
 }
 
 .app {
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   text-align: center;
   font-family: 'Bangers', cursive;
   display: inline-block;
+  margin: auto;
+}
+
+.list {
+
+}
+
+.item {
+  width: 100px;
+  margin: auto;
+  padding-left: 30px;
 }
 
 .picture {
@@ -20,9 +31,20 @@
 }
 
 .content {
-  height: 800px;
+  height: 400px;
   width: 605px;
   margin: auto;
+}
+
+.tasks {
+  width: 605px;
+  height: 400px;
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  margin: auto;
+  /*background-color: #e6ffee; */
 }
 
 

@@ -15,6 +15,12 @@
          preload: true
       });
 
+      scope.$watch('counter', function() {
+        if (scope.counter === 0) {
+          mySound.play();
+        };
+      });
+
       scope.onTimeout = function(){
         if (scope.counter > 0) {
             scope.counter = scope.counter-1;
@@ -26,11 +32,11 @@
             
             if (scope.noOfSessions === 4) {
              scope.counter = 15;
-             mySound.play();
+             /*mySound.play();*/
              scope.noOfSessions === 0;
             } else{
             scope.counter = 5;
-            mySound.play();
+            /*mySound.play();*/
           };
         }
       };
@@ -40,7 +46,7 @@
             scope.counter = scope.counter-1;
           }
           else if (scope.counter < 1) {
-            mySound.play();
+            /*mySound.play();*/
             scope.onBreak = false;
             scope.counter = 10;
             scope.runningInterval = null;
