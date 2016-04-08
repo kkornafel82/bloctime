@@ -15,8 +15,8 @@
 
 .list {
   list-style-type: square;
-
 }
+
 
 .item {
   width: 200px;
@@ -46,6 +46,28 @@
   font-family: 'Bangers', cursive;
   margin: auto;
   /*background-color: #e6ffee; */
+}
+
+h3 {
+  font-size: 2em;
+  text-align: center;
+}
+
+td, th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: pink;
+  border-color: white;
+}
+
+.tasks-table {
+  padding-top: 50px;
+  margin: auto;
+  width: 400px;
 }
 
 

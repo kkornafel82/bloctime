@@ -5,13 +5,13 @@
 
      $scope.addTask = function (){
         console.log($scope.task);
-        Tasks.all.$add({name: $scope.task});
+        Tasks.all.$add({name: $scope.task, createdAt: Firebase.ServerValue.TIMESTAMP});
         $scope.task = "";
      }
 
-     $scope.removeTask = function(){
-       console.log($scope.task)
-       Tasks.all.$remove($scope.task)
+     $scope.removeTask = function(task){
+       console.log($scope.task);
+       Tasks.all.$remove(task);
      }
 
 
