@@ -23,11 +23,11 @@
       <th>Created At</th>
       <th>          </th>
     </tr>
-    <tr class="item" ng-repeat="task in all | orderBy: '-createdAt'">
-      <td style="width: 100px;"> {{task.name}} </td>
-      <td>{{task.createdAt}}</td>
-      <td><button class="md-button" ng-click="removeTask(task)">Remove</button></td>
       <!--<td><button class="md-button" ng-click="timeSince()">Time</button></td>-->
+    <tr class="item" ng-repeat="task in all | orderBy: '-createdAt'">
+        <td>{{task.name}}</td>
+        <td>{{timestampFor(task)}}</td>
+        <td><button class="md-button" ng-click="removeTask()">Remove</button></td>
     </tr>
   </table>
 

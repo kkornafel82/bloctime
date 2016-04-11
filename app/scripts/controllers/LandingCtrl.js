@@ -14,8 +14,8 @@
        Tasks.all.$remove(task);
      }
 
-     $scope.timeSince = function(time) {
-      moment.unix(time);
+     $scope.timestampFor = function(task){
+       return moment(task.createdAt).fromNow();
      }
 
 
