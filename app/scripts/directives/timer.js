@@ -6,7 +6,7 @@
       restrict: 'E',
       scope: { },
       link: function(scope, element, attributes) {
-      scope.counter = 10;
+      scope.counter = 1500;
       scope.runningInterval = null;
       scope.onBreak = false;
       scope.noOfSessions = 0;
@@ -31,11 +31,11 @@
             scope.noOfSessions = scope.noOfSessions+1;
             
             if (scope.noOfSessions === 4) {
-             scope.counter = 15;
+             scope.counter = 1800;
              /*mySound.play();*/
              scope.noOfSessions === 0;
             } else{
-            scope.counter = 5;
+            scope.counter = 300;
             /*mySound.play();*/
           };
         }
@@ -65,11 +65,11 @@
         $interval.cancel(scope.runningInterval);
         
         if (scope.onBreak && scope.noOfSessions !== 4) {
-          scope.counter = 5;
+          scope.counter = 300;
         }else if (scope.onBreak && scope.noOfSessions === 4){
-          scope.counter = 15;
+          scope.counter = 1800;
         }else {
-          scope.counter = 10;
+          scope.counter = 1500;
         };
 
         scope.runningInterval = null;

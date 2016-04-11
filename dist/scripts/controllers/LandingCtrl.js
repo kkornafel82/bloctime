@@ -14,6 +14,10 @@
        Tasks.all.$remove(task);
      }
 
+     $scope.timeSince = function(time) {
+      moment.unix(time);
+     }
+
 
 }
 
