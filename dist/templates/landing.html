@@ -27,7 +27,7 @@
     <tr class="item" ng-repeat="task in all | orderBy: '-createdAt'">
         <td>{{task.name}}</td>
         <td>{{timestampFor(task)}}</td>
-        <td><button class="md-button" ng-click="removeTask()">Remove</button></td>
+        <td><button class="md-button" ng-click="removeTask(task)">Remove</button></td>
     </tr>
   </table>
 

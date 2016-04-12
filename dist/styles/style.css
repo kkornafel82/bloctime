@@ -1,5 +1,13 @@
+ *, *::before, *::after {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
+
 .container{
   height: 1100px;
+
 
 }
 
@@ -88,7 +96,7 @@ th {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 1000px;
+  width: 100%;
   background-color: pink;
   text-align: center;
   margin: auto;
@@ -120,3 +128,87 @@ th {
   height: 300px;
   width: 300px;
 }
+
+@media (max-width: 330px) {
+  .tasks .tasks-table {
+    width: 275px;
+    margin: auto;
+  }
+
+  .tasks {
+    width: 300px;
+  }
+
+  .content {
+    width: 300px;
+  }
+
+  .container {
+    width: 300px;
+  }
+
+  .footer {
+    font-size: 
+  }
+
+}
+
+
+
+
+
+@media (max-width: 414px) {
+    html { font-size: 95%; }
+
+    .title {
+      width: 320px;
+      height: 150px;
+      padding-top: 50px;
+    }
+
+    .tomato {
+      height: 200px;
+      width: 200px;
+    }
+
+    .picture {
+      width: 320px;
+      height: 205px;
+      display: block;
+      padding-left: 60px;
+    }
+
+    .app {
+      display: block;
+      width: 320px;
+      height: 100px;
+    }
+
+    .timer {
+      font-size: 150%
+    }
+
+    .tasks {
+      padding-top: 50px;
+      width: 360px;
+      font-size: 75%;
+    }
+
+    .tasks .tasks-table {
+      width: 320px;
+    }
+
+    .content {
+      width: 320px;
+      height: 300px;
+    }
+
+    .footer {
+      width: 360px;
+      font-size: 0.65rem;
+    }
+}
+
+
+
+
