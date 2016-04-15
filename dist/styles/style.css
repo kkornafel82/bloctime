@@ -136,6 +136,7 @@ th {
   }
 
   .tasks {
+    background-color:red;
     width: 300px;
   }
 
@@ -190,7 +191,7 @@ th {
 
     .tasks {
       padding-top: 50px;
-      width: 360px;
+      max-width: 360px;
       font-size: 75%;
     }
 
@@ -204,7 +205,7 @@ th {
     }
 
     .footer {
-      width: 360px;
+      max-width: 360px;
       font-size: 0.65rem;
     }
 }
