@@ -1,5 +1,5 @@
 (function() {
-   function LandingCtrl($scope, Tasks) {   
+   function LandingCtrl($scope, Tasks, Metric) {   
      window.scope = $scope;
      $scope.all = Tasks.all;
 
@@ -18,11 +18,17 @@
        return moment(task.createdAt).fromNow();
      }
 
+     $scope.addWorkSession = function() {
+       registerWorkSession();
+       var noOfSessions = numberOfSessions();
+       console.log(noOfSessions);
+     }
+
 
 }
 
 
    angular
        .module('blocTime')
-       .controller('LandingCtrl',["$scope", "Tasks", LandingCtrl]);
+       .controller('LandingCtrl',["$scope", "Tasks", "Metric", LandingCtrl]);
 })();
