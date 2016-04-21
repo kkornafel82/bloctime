@@ -75,6 +75,7 @@
         scope.runningInterval = null; 
       };
 
+
       }
     };
   }
