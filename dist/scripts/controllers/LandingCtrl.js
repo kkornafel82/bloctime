@@ -19,11 +19,10 @@
      }
 
      $scope.addWorkSession = function() {
-       registerWorkSession();
-       var noOfSessions = numberOfSessions();
+       Metric.registerWorkSession();
+       var noOfSessions = Metric.numberOfSessions();
        console.log(noOfSessions);
      }
-
 
 }
 
