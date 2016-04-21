@@ -72,9 +72,9 @@
           scope.counter = 1500;
         };
 
-        scope.runningInterval = null;
-        
+        scope.runningInterval = null; 
       };
+
 
       }
     };
