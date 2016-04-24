@@ -2,6 +2,7 @@
    function LandingCtrl($scope, Tasks, Metric) {   
      window.scope = $scope;
      $scope.all = Tasks.all;
+     Metric.registerPageView();
 
      $scope.addTask = function (){
         console.log($scope.task);
@@ -19,11 +20,13 @@
      }
 
      $scope.addWorkSession = function() {
-       registerWorkSession();
-       var noOfSessions = numberOfSessions();
-       console.log(noOfSessions);
+       Metric.registerWorkSessionStart();
      }
 
+     $scope.numberOfSessionsStarted = function() {
+       var sessions = Metric.numberOfSessionsStarted();
+       return sessions;
+     }
 
 }
 

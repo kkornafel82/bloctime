@@ -1,6 +1,6 @@
 <div>
   <p class="timer">{{ counter | timecode }}</p>
-  <button class="md-button" ng-click="myTimeout()" ng-click="addWorkSession()" ng-show="runningInterval === null && !onBreak">Start Working</button>
+  <button class="md-button" ng-click="myTimeout();$parent.addWorkSession()" ng-show="runningInterval === null && !onBreak">Start Working</button>
   <button class="md-button" ng-click="reset()" ng-show="runningInterval !== null">Reset</button>
   <button class="md-button" ng-click="myBreak()" ng-show="runningInterval === null && onBreak">Start Break</button>
   

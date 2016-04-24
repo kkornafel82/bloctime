@@ -1,6 +1,9 @@
 (function() {
-  function Metric($rootScope) {
+  function Metric($rootScope, $fireBaseObject) {
     $rootScope.workSessions = [];
+    var ref = new $fireBaseObject(scorching-heat-2362.firebaseIO.com)
+    var analytics = 
+
 
     return {
       // Function that records a metric object by pushing it to the $rootScope array
@@ -23,5 +26,5 @@
 
   angular
     .module('blocTime')
-    .factory('Metric', ['$rootScope', Metric]);
+    .factory('Metric', ['$rootScope','fireBaseObject', Metric]);
 })();
