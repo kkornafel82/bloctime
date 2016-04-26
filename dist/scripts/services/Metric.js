@@ -23,6 +23,9 @@
       registerWorkSessionStart: function() {
         var session = new Date();
         workSessions.push(session);
+        if (isNaN(analytics.worksessionsStarted)) {analytics.worksessionsStarted = 0;}
+        analytics.worksessionsStarted++;
+        analytics.$save();
       },
 
       numberOfSessionsStarted: function() {
