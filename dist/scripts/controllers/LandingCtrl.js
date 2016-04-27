@@ -28,9 +28,45 @@
        return sessions;
      }
 
-     
+     $scope.options = {
+        chart: {
+            type: 'cumulativeLineChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 50,
+                left: 65
+            },
+            x: function(d){ return d[0]; },
+            y: function(d){ return d[1]/100; },
+            average: function(d) { return d.mean/100; },
 
-}
+            color: d3.scale.category10().range(),
+            duration: 300,
+            useInteractiveGuideline: true,
+            clipVoronoi: false,
+
+            xAxis: {
+                axisLabel: 'X Axis',
+                tickFormat: function(d) {
+                    return d3.time.format('%m/%d/%y')(new Date(d))
+                },
+                showMaxMin: false,
+                staggerLabels: true
+            },
+
+            yAxis: {
+                axisLabel: 'Y Axis',
+                tickFormat: function(d){
+                    return d3.format(',.1%')(d);
+                },
+                axisLabelDistance: 0
+           }
+        }
+      }
+      $scope.data = Metric.analytics.pageViews;
+    }  
 
 
    angular
