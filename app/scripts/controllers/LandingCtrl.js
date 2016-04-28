@@ -28,6 +28,10 @@
        return sessions;
      }
 
+     Metric.analytics.$loaded().then(function() {
+      $scope.data = Metric.analytics.pageViews;
+     });
+
      $scope.options = {
         chart: {
             type: 'cumulativeLineChart',
@@ -38,6 +42,7 @@
                 bottom: 50,
                 left: 65
             },
+            // [[1,2], [3,4]]
             x: function(d){ return d[0]; },
             y: function(d){ return d[1]/100; },
             average: function(d) { return d.mean/100; },
@@ -65,7 +70,7 @@
            }
         }
       }
-      $scope.data = Metric.analytics.pageViews;
+
     }  
 
 

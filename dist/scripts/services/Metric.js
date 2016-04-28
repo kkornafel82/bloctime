@@ -5,10 +5,11 @@
     
     var ref = new Firebase("https://scorching-heat-2362.firebaseio.com/analytics");
     var analytics = $firebaseObject(ref);
-    window.analytics = analytics;
-    
+      
 
     return {
+
+      analytics: analytics,
       
       registerPageView: function() { 
       analytics.$loaded().then(function(){
