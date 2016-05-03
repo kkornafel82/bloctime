@@ -16,6 +16,7 @@
         console.log("Page views: " + analytics.pageViews);
         if (isNaN(analytics.pageViews)) {analytics.pageViews = 0;}
         analytics.pageViews++;
+        analytics.pageViews.data = ({total: analytics.pageViews, createdAt: Firebase.ServerValue.TIMESTAMP});
         analytics.$save();
 
       }) 
