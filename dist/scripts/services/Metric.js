@@ -14,9 +14,17 @@
       registerPageView: function() { 
       analytics.$loaded().then(function(){
         console.log("Page views: " + analytics.pageViews);
-        if (isNaN(analytics.pageViews)) {analytics.pageViews = 0;}
-        analytics.pageViews++;
-        analytics.pageViews.createdAt = Firebase.ServerValue.TIMESTAMP;
+        if ((analytics.pageViews === undefined)) {analytics.pageViews = {};}
+
+        //analytics.pageViews++;
+        var date = new Date();
+        date.setHours(9);
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
+        var seconds = date.getTime();
+        if ((analytics.pageViews[seconds] === undefined)) {analytics.pageViews[seconds] = 0}
+        analytics.pageViews[seconds] += 1;
         analytics.$save();
 
       }) 
