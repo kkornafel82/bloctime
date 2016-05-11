@@ -25,6 +25,9 @@
         var seconds = date.getTime();
         if ((analytics.pageViews[seconds] === undefined)) {analytics.pageViews[seconds] = 0}
         analytics.pageViews[seconds] += 1;
+        var results = [];
+        results.push([analytics.pageViews, analytics.pageViews[seconds]]);
+        console.log(results[1]);
         analytics.$save();
 
       }) 
