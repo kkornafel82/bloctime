@@ -28,9 +28,18 @@
        return sessions;
      }
 
-     //Metric.analytics.$loaded().then(function() {
-     // $scope.data = Metric.analytics.pageViews;
-     //});
+     Metric.analytics.$loaded().then(function() {
+     var values = [];
+     var keys = Object.keys(Metric.analytics.pageViews);
+     for (i=0; i < Object.keys(Metric.analytics.pageViews).length; i++ ) {
+       values.push([keys[i], Metric.analytics.pageViews[keys[i]]]);
+     }
+    $scope.data = [ {
+        key: "pageViews",
+        values: values
+    }]
+     });
+
 
      $scope.options = {
         chart: {
@@ -63,13 +72,7 @@
         }
       }
 
-     $scope.data = [
-            {
-                key: "Page Views",
-                values: [ [ 1, 2.974623048543] , [ 2, 1.7740300785979] , [ 3 , 4.4681318138177]]
-                ,
-                mean: 2
-            }];
+
 
     }  
 
